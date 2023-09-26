@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html,
+body,
+#root,
+.app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Basic page layout */
+header {
+  width: 100%;
+  background-color: #000;
+}
+.container {
+  margin: 0 auto;
+  padding-left: 10px;
+}
+.content {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+}
+.content {
+  flex: 1 0 auto;
+} /* flex: grow / shrink / flex-basis; */
+.footer {
+  flex-shrink: 0;
+}
+.sidebar {
+  width: 250px;
+  /* height: 100vh; */
+  height: calc(100vh - 127px);
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+}
+hr {
+  height: 0;
+  border: 0.5px solid rgb(230, 227, 227);
+  margin: 30px 0 20px 0;
+  padding-left: 0;
+  width: 92%;
+}
+.main-content {
+  width: 100vw;
+  padding: 10px 20px;
+  background-color: #efefef;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("music_score.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Home page */
+.mainTitle {
+  color: #fff;
+  font-size: 48px;
+  text-shadow: 4px 4px 8px #000;
+  animation: slideInFromLeft 2s ease-in;
+}
+.mainSubtitle {
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 4px 4px 10px #000;
+  animation: slideInFromRight 2s ease-in;
+}
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Home page */
+.home {
+  display: flex;
+}
+.homeContainer {
+  flex: 6;
+  background-color: #fff;
+  padding: 10px;
+}
+.homeContainer .top {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+.homeContainer .top .left {
+  flex: 1;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 20px;
+  background-color: white;
+}
+.homeContainer .top .right {
+  flex: 1;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 20px;
+  background-color: white;
+}
+.homeContainer .bottom {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+.homeContainer .bottom .left {
+  flex: 1;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 20px;
+  background-color: white;
+}
+.homeContainer .bottom .right {
+  flex: 1;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 20px;
+  background-color: white;
+}
+.home .widgets {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+.widget {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 20%;
+  flex-wrap: wrap;
+  padding: 10px;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  border-radius: 10px;
+  height: 100px;
+}
+.widget .left,
+.widget .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.widget .title {
+  font-weight: bold;
+  font-size: 14px;
+  color: gray;
+}
+
+.widget .counter {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.widget .link {
+  width: max-content;
+  font-size: 12px;
+  border-bottom: 1px solid gray;
+}
+
+.widget .percentage {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.icon {
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+
+.composer-content {
+  width: 550px;
+  padding: 10px 20px;
+  position: relative;
+  margin: 0 auto;
+}
+.categories-content {
+  width: 400px;
+  padding: 10px 20px;
+  position: relative;
+  margin: 0 auto;
+}
+.labels-content {
+  width: 400px;
+  padding: 10px 20px;
+  position: relative;
+  margin: 0 auto;
+}
+.media-content {
+  width: 400px;
+  padding: 10px 20px;
+  position: relative;
+  margin: 0 auto;
+}
+.footer {
+  background-color: #000;
+  color: #fff;
+  height: 60px;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Page styles */
+.title {
+  font-size: 24px;
+}
+.subtitle {
+  font-size: 22px;
+}
+.list-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: "center";
+  font-weight: bold;
+  font-size: 24px;
+}
+.searchInput {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 3px 15px;
+}
+
+/* Details pages */
+.details h2 {
+  color: rgb(118, 180, 231);
+  font-weight: 700;
+  text-shadow: 1px 1px 0px #000;
+  font-size: 30px;
+}
+.details h3 {
+  color: rgb(118, 180, 231);
+  font-weight: 700;
+  text-shadow: 1px 1px 0px #000;
+  font-size: 24px;
+}
+.details h4 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Delete details pages */
+.deleteCoverImage {
+  width: 200px;
+}
+.deleteDetails p {
+  font-size: 14px;
+}
+
+/* MUI table styles */
+.MuiTable-root {
+  margin: 0 auto;
+}
+.MuiTableCell-root {
+  padding: 0 14px !important;
+}
+.MUIDataTableBodyRow-root {
+  height: 100px;
+}
+
+/* Form Styles */
+.form {
+  position: relative;
+}
+.imageUpload {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 14px;
+  position: absolute;
+  top: 20px;
+  right: 100;
+}
+.coverImage-sm {
+  width: 75px;
+  height: 75px;
+  border: 1px solid #000;
+}
+.hidden {
+  display: none;
+}
+.form-input {
+  font-size: 16px;
+  padding: 8px 10px;
+  width: 80%;
+}
+.editLabel {
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+.inputLabel {
+  font-size: 14px;
+}
+.editInput {
+  width: 100%;
+  font-size: 16px;
+  background-color: transparent;
+}
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #000;
+}
+input:focus {
+  background-color: #fff;
+}
