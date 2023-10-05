@@ -7,4 +7,4 @@ You can categorize recordings by music type, composer, work title and more. Perf
 
 Recordings can also be edited or deleted as needed.
 
-While it is written for classicla music, the program could be used for any type of music by changing the categories and more as needed 
+While it is written for classical music, the program could be used for any type of music by changing the categories and more as needed 
